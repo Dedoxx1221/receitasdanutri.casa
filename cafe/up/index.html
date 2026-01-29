@@ -398,22 +398,31 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
           </div>
         </div>
 
-        <div class="elementor-element elementor-element-0a86c04 elementor-align-justify elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-id="0a86c04" data-element_type="widget" data-widget_type="button.default">
-          <div class="elementor-widget-container">
-            <div class="elementor-button-wrapper">
-              <a class="elementor-button elementor-button-link elementor-size-md" href="https://lastlink.com/p/CC9EB32E2/checkout-payment">
-                <span class="elementor-button-content-wrapper">
-                  <span class="elementor-button-text">QUERO AS RECEITAS!</span>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
+        <script src="https://cdn.lastlink.com/upsell.min.js"></script>
+    <script>
+    var upsellRedirect = "https://lastlink.com/app/member/dashboardV2";
 
-        <div class="elementor-element elementor-element-ac21b43 elementor-widget elementor-widget-text-editor" data-id="ac21b43" data-element_type="widget" data-widget_type="text-editor.default">
-          <div class="elementor-widget-container">
-            <p><a href="https://receitasdanutri.com.br/down/" rel="nofollow"><span style="color:#ffffff;"><u>não, vou recusar a oferta</u></span></a></p>
-          </div>
+    function setupDenyButtons() {
+        document.querySelectorAll('[id^="denyButton"]').forEach(button => {
+            button.onclick = function() {
+                const currentUrl = new URL(window.location.href);
+                const newUrl = new URL("null");
+
+                currentUrl.searchParams.forEach((value, key) => {
+                    newUrl.searchParams.append(key, value);
+                });
+
+                window.location.href = newUrl.toString();
+            };
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupDenyButtons);
+    } else {
+        setupDenyButtons();
+    }
+    </script><div style="font-family: DM Sans; display: flex; flex-direction: column; gap: 24px; align-items: center; cursor: pointer;"><div class="button-default button-accept w-full" style="padding: 17px 32px; line-height: 22px; border-radius: 12px; font-weight: 700 !important; background-color: rgb(52, 226, 60); color: rgb(0, 0, 0);" id="llupsell-C14675380-"> Quero comprar agora! </div><div class="button-default button-deny w-full" style="text-decoration: underline; line-height: 22px; font-size: 16px; font-weight: 700 !important; color: rgb(0, 0, 0);" id="denyButton0dae941"> Recusar esta oferta </div></div>
         </div>
 
         <!-- Removido widget HTML com UTMify / pixels -->
