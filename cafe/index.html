@@ -620,9 +620,26 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 		</div>
 				</div>
 				</div>
-				<div class="elementor-element elementor-element-4417d2a elementor-widget elementor-widget-text-editor" data-id="4417d2a" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							OFERTA EXPIRA EM 29 de agosto						</div>
+			<div class="elementor-widget-container">
+  OFERTA EXPIRA EM <span id="data-expiracao"></span>
+</div>
+
+<script>
+  (function () {
+    const hoje = new Date();
+    hoje.setDate(hoje.getDate() + 1); // dia seguinte automático
+
+    const meses = [
+      "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+      "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+    ];
+
+    const dia = hoje.getDate();
+    const mes = meses[hoje.getMonth()];
+
+    document.getElementById("data-expiracao").innerText = `${dia} de ${mes}`;
+  })();
+</script>
 				</div>
 				</div>
 				</div>
