@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecionando...</title>
+
+  <!-- BuyGoods Facebook Link Manager (OBRIGATÓRIO) -->
+  <script type="text/javascript" src="https://buygoods.com/js/facebook_link_manager.js"></script>
+
+  <!-- Redirect ultra rápido com repasse de parâmetros -->
+  <script>
+    (function () {
+      var params = window.location.search;
+      var baseUrl = "https://tryglpro.com/glp1?aff_id=148067";
+
+      if (params && params.length > 1) {
+        window.location.replace(
+          baseUrl + "&" + params.substring(1)
+        );
+      } else {
+        window.location.replace(baseUrl);
+      }
+    })();
+  </script>
+</head>
+<body>
+</body>
+
+</html>
