@@ -161,7 +161,33 @@ a{text-decoration-thickness:1px!important;text-underline-offset:.1em}:where(.wp-
 						<div class="elementor-element elementor-element-10c28d95 elementor-widget elementor-widget-html" data-id="10c28d95" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 					<vturb-smartplayer id="vid-698f982daa67549cb8e4b838" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/45521673-96f5-49cf-b157-586379ebfee7/players/698f982daa67549cb8e4b838/v4/player.js", s.async=!0,document.head.appendChild(s); </script>				</div>
 				<div class="elementor-element elementor-element-1992e79 elementor-widget elementor-widget-heading" data-id="1992e79" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">259 personas mirando ahora...</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">
+  <span id="viewer-count">259</span> personas mirando ahora...
+</h2>
+
+<script>
+  (function() {
+    var min = 247;   // número mínimo
+    var max = 342;   // número máximo
+    var current = 259; // número inicial
+    var el = document.getElementById("viewer-count");
+
+    function updateNumber() {
+      var change = Math.floor(Math.random() * 7) - 3; 
+      // varia entre -3 e +3
+
+      current += change;
+
+      if (current < min) current = min;
+      if (current > max) current = max;
+
+      el.textContent = current;
+    }
+
+    setInterval(updateNumber, 3000); 
+    // muda a cada 3 segundos
+  })();
+</script>		</div>
 					</div>
 		</div>
 					</div>
