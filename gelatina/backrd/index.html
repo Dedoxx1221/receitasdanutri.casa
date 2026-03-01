@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oferta Especial</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#f2f3f5;color:#222}
+
+/* TOPBAR */
+.topbar{
+background:#e11d48;
+color:#fff;
+text-align:center;
+padding:8px;
+font-size:13px;
+font-weight:600;
+}
+
+/* CONTAINER */
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+
+h1{
+text-align:center;
+color:#e11d48;
+font-size:36px;
+font-weight:800;
+margin-bottom:10px;
+line-height:1.2;
+}
+
+.subtitle{
+text-align:center;
+color:#555;
+margin-bottom:40px;
+}
+
+.section-title{
+text-align:center;
+font-size:22px;
+font-weight:700;
+margin-bottom:30px;
+}
+
+/* RESULTADOS */
+.results{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin-bottom:60px;
+}
+
+.results img{
+width:160px;
+height:240px;
+object-fit:cover;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.12);
+background:#eee;
+}
+
+/* CARDS */
+.cards{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:60px;
+}
+
+.card{
+background:#fff;
+padding:25px;
+width:260px;
+border-radius:14px;
+box-shadow:0 8px 22px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.card h3{margin-bottom:6px;font-size:16px}
+
+/* TESTIMONIALS COMPACTOS */
+
+.testimonials{
+max-width:760px;
+margin:0 auto 60px auto;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.testimonial{
+background:#fff;
+padding:18px;
+border-radius:14px;
+box-shadow:0 8px 22px rgba(0,0,0,0.08);
+display:flex;
+align-items:center;
+gap:16px;
+}
+
+.avatar{
+width:56px;
+height:56px;
+border-radius:50%;
+object-fit:cover;
+flex-shrink:0;
+}
+
+.testimonial-content{flex:1}
+
+.testimonial-header{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:4px;
+font-size:15px;
+}
+
+.stars{
+color:#fbbf24;
+font-size:14px;
+letter-spacing:2px;
+}
+
+.testimonial p{
+color:#555;
+font-size:14px;
+line-height:1.4;
+}
+
+/* PRODUTO */
+.product{
+text-align:center;
+margin-bottom:40px;
+}
+
+.product img{
+max-width:520px;
+width:100%;
+border-radius:14px;
+box-shadow:0 10px 28px rgba(0,0,0,0.15);
+}
+
+/* OFERTA */
+.offer{
+background:#fff8e6;
+border:4px dashed #facc15;
+padding:36px;
+border-radius:14px;
+text-align:center;
+max-width:520px;
+margin:40px auto;
+}
+
+.offer-title{
+  color:#000;
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.price-row{
+  display:flex;
+  align-items:baseline;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.old-price{
+  font-size:18px;
+  color:#999;
+  text-decoration:line-through;
+  font-weight:500;
+}
+
+.new-price{
+  font-size:44px;
+  font-weight:800;
+  color:#16a34a;
+  line-height:1;
+}
+
+.new-price small{
+  font-size:16px;
+  font-weight:700;
+  margin-left:4px;
+  color:#16a34a;
+}
+
+.button{
+  display:inline-block;
+  background:#16a34a;
+  color:#fff;
+  padding:14px 26px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.25s;
+}
+
+.button:hover{
+  transform:translateY(-1px);
+  box-shadow:0 8px 20px rgba(22,163,74,.35);
+}
+/* GARANTIA */
+.guarantee{
+background:#fff;
+padding:26px;
+border-radius:14px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+text-align:center;
+max-width:620px;
+margin:40px auto;
+}
+
+/* FAQ */
+.faq{
+max-width:620px;
+margin:40px auto;
+}
+
+.faq-item{
+background:#fff;
+margin-bottom:12px;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 12px rgba(0,0,0,0.06);
+}
+
+.faq-question{
+padding:16px;
+cursor:pointer;
+font-weight:600;
+background:#f3f4f6;
+}
+
+.faq-answer{
+display:none;
+padding:16px;
+font-size:14px;
+color:#555;
+}
+
+footer{
+background:#0f172a;
+color:#fff;
+text-align:center;
+padding:22px;
+margin-top:60px;
+font-size:13px;
+}
+
+/* MOBILE */
+@media (max-width:600px){
+h1{font-size:28px}
+.results img{width:44%;height:220px}
+.testimonial{align-items:flex-start}
+.avatar{width:48px;height:48px}
+}
+
+.bonus-wrapper{
+  display:flex;
+  justify-content:center;
+  margin:40px 0 70px;
+}
+
+.bonus-box{
+  background:#efefef;
+  padding:32px 40px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  max-width:720px;
+  width:100%;
+}
+
+.bonus-box ul{
+  list-style:none;
+}
+
+.bonus-box li{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin:14px 0;
+  font-size:18px;
+  line-height:1.5;
+}
+
+.check{
+  color:#16a34a;
+  font-weight:bold;
+  font-size:20px;
+  margin-top:2px;
+}
+
+/* BOTÃO PULSANTE */
+.button{
+  animation: pulseButton 1.6s infinite;
+}
+
+@keyframes pulseButton{
+  0%{
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(22,163,74,0.6);
+  }
+  70%{
+    transform: scale(1.06);
+    box-shadow: 0 0 0 18px rgba(22,163,74,0);
+  }
+  100%{
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(22,163,74,0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+🎉 ¡FELICIDADES! HAS SIDO SELECCIONADA PARA UN DESCUENTO VIP
+</div>
+
+<div class="container">
+
+<h1>¡ESPERA! NO TE VAYAS<br>CON LAS MANOS VACÍAS</h1>
+
+<p class="subtitle">
+Sabemos que el precio puede ser un obstáculo. Por eso autorizamos una oferta única de <b>$17</b> para ti.
+</p>
+
+<h2 class="section-title">Transformaciones reales en apenas 30 días:</h2>
+
+<div class="results">
+<img src="images/8zgTSQj.jpeg" alt="">
+<img src="images/DYt9w68.png" alt="">
+<img src="images/VzwLSc6.jpeg" alt="">
+</div>
+
+<h2 class="section-title">¿Por qué funciona?</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Activa Hormonas</h3>
+<p>Apaga el hambre</p>
+</div>
+
+<div class="card">
+<h3>Derrite Grasa</h3>
+<p>Mientras duermes</p>
+</div>
+
+<div class="card">
+<h3>Sin Rebote</h3>
+<p>Metabolismo acelerado</p>
+</div>
+</div>
+
+<h2 class="section-title">Lo que dicen nuestras alumnas:</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+<img class="avatar" src="images/1qAEzer.jpeg" alt="">
+<div class="testimonial-content">
+<div class="testimonial-header">
+<strong>Elena, 54 años</strong>
+<span class="stars">★★★★★</span>
+</div>
+<p>"Me siento renacida. La ropa me queda perfecta."</p>
+</div>
+</div>
+
+<div class="testimonial">
+<img class="avatar" src="images/MUA2PmQ.png" alt="">
+<div class="testimonial-content">
+<div class="testimonial-header">
+<strong>Patricia, 55 años</strong>
+<span class="stars">★★★★★</span>
+</div>
+<p>"El mejor regalo que me he dado. Fácil y rápido."</p>
+</div>
+</div>
+
+<div class="testimonial">
+<img class="avatar" src="images/x8ZWvW6.png" alt="">
+<div class="testimonial-content">
+<div class="testimonial-header">
+<strong>Margarita, 51 años</strong>
+<span class="stars">★★★★★</span>
+</div>
+<p>"Nunca pensé que una gelatina cambiaría mi vida."</p>
+</div>
+</div>
+
+</div>
+
+<div class="product">
+<img src="images/A1W7C27.png" alt="">
+</div><!-- BONUS -->
+<div class="bonus-wrapper">
+  <div class="bonus-box">
+    <ul>
+      <li><span class="check">✔</span><b>Guía Principal:</b> El Truco de la Gelatina</li>
+      <li><span class="check">✔</span><b>BONUS 1:</b> Vientre Plano en 24h</li>
+      <li><span class="check">✔</span><b>BONUS 2:</b> Truco de Glúteos Firmes</li>
+      <li><span class="check">✔</span><b>BONUS 3:</b> Adiós Celulitis</li>
+      <li><span class="check">✔</span><b>BONUS 4:</b> Secretos de la Menopausia</li>
+      <li><span class="check">✔</span><b>BONUS 5:</b> Secreto de las Coreanas</li>
+    </ul>
+  </div>
+</div>
+
+<div class="offer">
+  <h1 class="offer-title">Llévatelo todo (Pack Completo)</h1>
+
+  <div class="price-row">
+    <span class="old-price">$97</span>
+    <span class="new-price">
+      $17<small>USD</small>
+    </span>
+  </div>
+
+  <a href="https://pay.hotmart.com/L102920805G?off=1sl9h5vd&checkoutMode=10" class="button">SÍ, QUIERO MI ACCESO POR SOLO $17</a>
+</div>
+
+<div class="guarantee">
+<h3>Garantía Blindada de 60 Días</h3>
+<p>Si no te gusta, te devolvemos el 100% de tu dinero.</p>
+</div>
+
+<h2 class="section-title">Preguntas Frecuentes</h2>
+
+<div class="faq">
+<div class="faq-item">
+<div class="faq-question">¿Es un pago único?</div>
+<div class="faq-answer">Sí, es un único pago sin mensualidades.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">¿Cuándo recibo el acceso?</div>
+<div class="faq-answer">Recibes el acceso inmediatamente después del pago.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">¿Y si no funciona?</div>
+<div class="faq-answer">Tienes 60 días de garantía total.</div>
+</div>
+</div>
+
+</div>
+
+<footer>
+Copyright © 2026 - Todos los derechos reservados
+</footer>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(item=>{
+item.addEventListener("click",()=>{
+const answer=item.nextElementSibling;
+answer.style.display = answer.style.display==="block" ? "none" : "block";
+});
+});
+</script>
+
+</body>
+</html>
