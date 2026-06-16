@@ -1,0 +1,83 @@
+.header-mini-cart .close{ display: block; float: right; text-decoration: none; }
+.header-mini-cart .btn-show-cart{ display: block; }
+
+/* Novo CSS*/
+.mini-cart { max-width: 100%; position: fixed; z-index: 100; top: 0; width: 100%; height: 100%; left: 0; }
+.mini-cart .overlay { content: ""; display: block; z-index: -1; position: fixed; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); top: 0; left: 0; }
+.mini-cart-content { padding: 5px 10px; margin: 0 5px; background-color: white; z-index: 100; top: 50%; left: 50%; position: absolute; box-shadow: 0px 3px 2px #555; transform: translateY(-50%) translateX(-50%); max-width: 80vw; } 
+@media screen and (max-width: 991px){ .mini-cart-content { width: 90%; } }
+/* Fim - Novo CSS*/
+
+.mini-cart-content .btn-success { margin-bottom: 10px; } 
+.mini-cart table { border-collapse: collapse; background-color: #fff; margin-bottom: 10px; margin-top: 5px; width: 100%;}
+.mini-cart table tr th { font-weight: bold; }
+.mini-cart table tr td, .mini-cart table tr th { border: 1px solid #ccc; padding: 4px 10px; font-size: 0.9em; }
+.mini-cart table tr th { width: 10px; }
+.mini-cart table tr th.product, .mini-cart table tr td.product { width: 300px; font-weight: bold; }
+.mini-cart table tr th.qtd { width: 50px; }
+.mini-cart table tr.total td{ background-color: #FCF8E3; }
+
+.table-shopping-cart > thead > tr > th, .table > tbody > tr > th, .table-shopping-cart > tfoot > tr > th, 
+.table-shopping-cart > thead > tr > td, .table > tbody > tr > td, .table-shopping-cart > tfoot > tr > td {
+    padding: 1%;
+}
+
+.form-catalog-search { width: 100%; border: 1px solid #999; background-color: #fff; border-radius: 15px; padding: 3px 0 2px 0;}
+.form-catalog-search input[type=text] { width: calc(100% - 74px); margin: 0 0 0 20px; float: left; padding: 0 10px; border: 1px solid #fff; font-size: 1.2em; color: #666; font-weight: normal; }
+.form-catalog-search button { width: 44px; margin: 0 -20px 0 0; float: left; border: 1px solid #fff; background: #fff; font-size: 1.2em; color: #999; }
+
+.shopping-cart { padding-left: 15px; padding-right: 15px; }
+.shopping-cart .header > label { text-align:center; color:black; display: inline-block; max-width: 100%; margin-bottom: 5px; font-weight: bold; font-size: 14px; margin-top: 0px; }
+.shopping-cart .header > label.shopping-cart .product-details{ text-align: left; }
+@media screen and (max-width:767px){
+    .header{display:none}
+}
+.shopping-cart .product-image{float:left;width:20%}
+.shopping-cart .product-details{float:left;width:37%}
+
+.shopping-cart .product-price{float:left;width:12%}
+.shopping-cart .product-price{text-align:center}
+.shopping-cart .product-quantity{float:left;padding-left:5px;padding-right:5px;width:17%}
+.shopping-cart .product-removal{float:left;width:5%;text-align:center}
+.shopping-cart .product-removal button{width:50%}
+.shopping-cart .product-line-price{float:right;width:9%;text-align:right !important;}
+.group:before,.shopping-cart:before,.column-labels:before,.product:before,.totals-item:before,.group:after,.shopping-cart:after,.column-labels:after,.product:after,.totals-item:after{content:'';display:table}
+.group:after,.shopping-cart:after,.column-labels:after,.product:after,.totals-item:after{clear:both}
+.group,.shopping-cart,.column-labels,.product,.totals-item{zoom:1}
+.column-labels label{padding-bottom:15px;margin-bottom:15px;border-bottom:1px solid #eee}
+.column-labels .shopping-cart .product-image,.column-labels .shopping-cart .product-details,.column-labels .shopping-cart .product-removal{text-indent:-9999px}
+.product{margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid #eee}
+.shopping-cart .product .product-image{text-align:center}
+.shopping-cart .product .product-image img{width:100px}
+.shopping-cart .product .product-details .product-title{margin-right:20px}
+.shopping-cart .product .product-details .product-description{margin:5px 20px 5px 0;line-height:1.4em}
+.product .remove-product{border:0;padding:4px 8px;background-color:#c66;color:#fff;font-size:12px;border-radius:3px}
+.product .remove-product:hover{background-color:#a44}
+.totals .totals-item{float:right;clear:both;width:100%;margin-bottom:10px}
+.totals .totals-item label{float:left;clear:both;width:79%;text-align:right;font-size:14px;margin-top:0px;margin-bottom:0px;font-weight: bold;}
+.totals .totals-item .totals-value{float:right;width:21%;text-align:right}
+.checkout{float:right;border:0;margin-top:20px;padding:6px 25px;background-color:#6b6;color:#fff;font-size:25px;border-radius:3px; text-align:center;}
+.checkout:hover{text-decoration: none; color: white; box-shadow: 3px 2px 4px #ccc;}
+@media screen and (max-width:767px){
+    .shopping-cart{margin:0;padding-top:20px;border-top:1px solid #eee}
+    .column-labels{display:none}
+    .shopping-cart .product-image{float:right;width:auto}
+    .shopping-cart .product-image img{margin:0 0 10px 10px}
+    .shopping-cart .product-details{float:none;margin-bottom:10px;width:auto}
+    .shopping-cart .product-price{clear:both;font-weight:700;padding:15px;text-align:right;width:100%}
+    .shopping-cart .product-quantity{width:auto}
+    .shopping-cart .product-quantity input{margin-left:auto}
+    .shopping-cart .product-removal{width:100%;margin-top:15px;float:right}
+    .shopping-cart .product-removal button{float:right;width:auto}
+    .shopping-cart .product-line-price{float:right;width:70px}
+    .checkout{ float:left; margin-bottom:15px; width:100%; }
+    .shopping-back{float:right; margin-bottom:15px; width:100%; }
+    .shopping-cart .product .remove-product{float:right;}
+    .shopping-cart .totals .totals-item label{float:left;clear:both;width:69%;text-align:right;}
+    .shopping-cart .totals .totals-item .totals-value{float:right;width:31%;text-align:right}
+}
+
+.mini-cart-content > .container-fluid { max-height: 80vh; overflow-y: auto; }
+
+.shopping-back { float: left; border: 0; margin-top: 20px; padding: 6px 25px; font-size: 16px; border-radius: 3px; text-align: center; }
+.shopping-back:hover{text-decoration: none; background-color: #eee; box-shadow: 3px 2px 4px #ccc; }
